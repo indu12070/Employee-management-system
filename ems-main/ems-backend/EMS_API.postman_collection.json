@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "ems-backend-collection",
+		"name": "EMS Backend API",
+		"description": "Collection for Employee Management System Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get All Employees",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "employees"]
+						}
+					}
+				},
+				{
+					"name": "Get Employee by ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{{employeeId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "employees", "{{employeeId}}"]
+						}
+					}
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://localhost:8080/api/employees",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "employees"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phoneNumber\": \"1234567890\",\n    \"departmentId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{{employeeId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "employees", "{{employeeId}}"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phoneNumber\": \"1234567890\",\n    \"departmentId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "http://localhost:8080/api/employees/{{employeeId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "employees", "{{employeeId}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Get All Departments",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/departments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "departments"]
+						}
+					}
+				},
+				{
+					"name": "Get Department by ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/departments/{{departmentId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "departments", "{{departmentId}}"]
+						}
+					}
+				},
+				{
+					"name": "Create Department",
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://localhost:8080/api/departments",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "departments"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"IT Department\",\n    \"description\": \"Information Technology Department\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"url": {
+							"raw": "http://localhost:8080/api/departments/{{departmentId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "departments", "{{departmentId}}"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"IT Department\",\n    \"description\": \"Information Technology Department\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "http://localhost:8080/api/departments/{{departmentId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "departments", "{{departmentId}}"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Payroll",
+			"item": [
+				{
+					"name": "Get All Payroll Records",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/payrolls",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "payrolls"]
+						}
+					}
+				},
+				{
+					"name": "Get Payroll by ID",
+					"request": {
+						"method": "GET",
+						"url": {
+							"raw": "http://localhost:8080/api/payrolls/{{payrollId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "payrolls", "{{payrollId}}"]
+						}
+					}
+				},
+				{
+					"name": "Create Payroll Record",
+					"request": {
+						"method": "POST",
+						"url": {
+							"raw": "http://localhost:8080/api/payrolls",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "payrolls"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": 1,\n    \"payDate\": \"2024-03-15\",\n    \"baseSalary\": 5000.00,\n    \"bonus\": 500.00,\n    \"deductions\": 1000.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Update Payroll Record",
+					"request": {
+						"method": "PUT",
+						"url": {
+							"raw": "http://localhost:8080/api/payrolls/{{payrollId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "payrolls", "{{payrollId}}"]
+						},
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": 1,\n    \"payDate\": \"2024-03-15\",\n    \"baseSalary\": 5000.00,\n    \"bonus\": 500.00,\n    \"deductions\": 1000.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					}
+				},
+				{
+					"name": "Delete Payroll Record",
+					"request": {
+						"method": "DELETE",
+						"url": {
+							"raw": "http://localhost:8080/api/payrolls/{{payrollId}}",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["api", "payrolls", "{{payrollId}}"]
+						}
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "employeeId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "departmentId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "payrollId",
+			"value": "1",
+			"type": "string"
+		}
+	]
+} 
